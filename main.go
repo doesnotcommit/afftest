@@ -134,7 +134,6 @@ func processRequest(ctx context.Context, i int, u string, cli *http.Client, resu
 	}
 	log.Printf("requesting %s", u)
 	resp, err := cli.Do(req)
-	log.Printf("request done: %v, %d", err, cli.Timeout)
 	if err != nil {
 		handleErr(err)
 		return
